@@ -1,0 +1,20 @@
+Need: story (pulled from online or self-created), code
+On spaceship w/ problem, have to solve it
+Multiple rooms w/ resources in them & parts of machines to fix
+Progressive dying
+Defined end points (fail & die or succeed & land)
+Aliens w/ combat?
+
+Necessary features:
+Measure health of spaceship & display frequently
+Maintain inventory, pick, drop, & store items
+Enter & exit rooms
+Display content of room, including items you can take & items to explore
+Ability to explore items
+Ability to use items
+Testing whether used item is effective
+
+Optional features:
+Random-number mechanism for fires starting & repairing
+Assign items that break by random-number generator, allowing story variation
+Combat mechanism, if we decide to add Combat
