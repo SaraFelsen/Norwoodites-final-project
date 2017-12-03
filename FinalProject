@@ -1,5 +1,11 @@
 public class FinalProject {
   public static void main(String[] args){
-    int i = 0;
+    /*
+    Want the code to: 
+    have multiple methods for the branching paths
+    be able to access inventory
+    be able to pick up items
+    Be able to access the status of ship and player
+    */
   }
 }
