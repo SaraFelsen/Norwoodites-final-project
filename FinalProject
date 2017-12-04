@@ -7,5 +7,6 @@ public class FinalProject {
     be able to pick up items
     Be able to access the status of ship and player
     */
+    TextIO.putf("Unknown beings have invaded our spaceship – Explorer of the Judges – and caused severe damage of the left-wing engine. The mission of you, a spaceship specialist, is to travel from the control room to the end of the spaceship where the damaged engine rests, and fix the engine. On your way there you will encounter unknown beings, their ambush, and other dangerous situations. Now, move.");
   }
 }
