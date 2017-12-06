@@ -1,25 +1,30 @@
-  //code for block D "Pod on its way"
   public static void blockD(){
     System.out.print("You catch a glimpse of the shining stars engulfed by the dark universe by the pod window.");
     System.out.print("How mysterious. The pod starts to shaking and squeaking. You become alert and nervous again.");
     System.out.print("A unexplainable fear sticks in your throat as you see the pod tunnel is blocked by debris of");
     System.out.print("the spaceship. What kind of creature has done it. And it is in your ship. If you keep staying in the pod,");
-    System.out.print("it will go through the hole of the tunnel and drift into the space.");
+    System.out.println("it will go through the hole of the tunnel and drift into the space.");
 
     choiceA();
   }
   //choice for the end of block D
   public static void choiceA() {
     String input;
+    Boolean done = false;
+    System.out.println("Please input 'stay' to stay in the pod or 'handle' to pull the handle");
     TextIO.putf("> ");
     input = TextIO.getln();
-    if (input.equals("stay")) {
-      blockE();
-    } else if (input.equals("handle")) {
-      blockF();
-    } else {
-      System.out.println("Invalid input. Please input 'stay' to stay in the pod or 'handle' to pull the handle");
-    }
+    do {
+      if (input.equalsIgnoreCase("stay")) {
+        done = true;
+        blockE();
+      } else if (input.equalsIgnoreCase("handle")) {
+        done = true;
+        blockF();
+      } else {
+        choiceA();
+      }
+    } while (done = false);
   }
   //code for block E
   public static void blockE() {
@@ -32,24 +37,27 @@
     System.out.print("You put on the emergency space suit and jump out of the pod. ");
     System.out.print("You hear the sound of the engine behind the debris.");
     System.out.print("You climbed over the debris. But there is a gap between where you stand and the damaged engine.");
-    System.out.print("Judging by the distance, you are not sure whether you can jump over the gap.");
+    System.out.println("Judging by the distance, you are not sure whether you can jump over the gap.");
 
     choiceB();
   }
   //code for choice at end of block F
   public static void choiceB() {
     String input;
+    Boolean done = false;
     TextIO.putf("> ");
     input = TextIO.getln();
-    if (input.equals("find another way")) {
-      engineExplode();
-    } else if (input.equals("jump")) {
-      jumpFailure();
-    } else if (input.equals("leave the area")){
-      engineExplode();
-    }else {
-      System.out.println("Invalid input. Please input 'jump' to jump the gap or 'find another way' to find another way");
-    }
+    do {
+      if (input.equals("find another way")) {
+        printFailureMessage();
+      } else if (input.equals("jump")) {
+        jumpFailure();
+      } else if (input.equals("leave the area")){
+        printFailureMessage();
+      } else {
+        choiceB();
+      }
+    } while (done = false);
   }
   //code for failure to jump
   public static void jumpFailure() {
@@ -59,4 +67,5 @@
   //code for failing to leave the pod
   public static void printFailureMessage() {
     System.out.println("The pod collides with the debris and bounces off into the space, drifting into the unknown darkness.");
+    System.out.println("Game Over");
   }
