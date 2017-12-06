@@ -42,11 +42,11 @@
     TextIO.putf("> ");
     input = TextIO.getln();
     if (input.equals("find another way")) {
-      engineExplodes();
+      engineExplode();
     } else if (input.equals("jump")) {
       jumpFailure();
-    } else if (input.equals("leave the area"){
-      engineExplodes();
+    } else if (input.equals("leave the area")){
+      engineExplode();
     }else {
       System.out.println("Invalid input. Please input 'jump' to jump the gap or 'find another way' to find another way");
     }
